@@ -1,5 +1,19 @@
 .window{
-    border: 1px solid orange;
+    border: 1px solid rgb(184, 0, 204);
     width: 20vw;
     height: 40vh;
+    background-color: rgba(78, 15, 63, 0.593);
+    h5{
+        margin: 8px 0;
+        text-overflow: ellipsis;
+    }
+    .details{
+        max-width: 20vw;
+        max-height: 10vh;
+        text-overflow: ellipsis;
+    }
+    img{
+        width:20vw;
+        height:20vh;
+    }
 }
