@@ -1,4 +1,4 @@
-.home{
+.library{
     width: 100vw;
     height: 100vh;
     background-image: url('../../public/bg1.jpg');
@@ -9,8 +9,7 @@
     align-content: center;
     .container{
         width: 80vw;
-        height: auto;
-        align-content: center;
+        height: 80vh;
         border-radius: 50px;
         color:#eeee;
         background-color: rgb(0 0 0 / 76%);
@@ -56,42 +55,17 @@
                 margin:0;
             }
         }
-        .suggestions{
-            font-family: "Chakra Petch", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            margin-top: 0;
-            text-align: center;
-            font-size: xx-large;
-            h4{
-                margin: 0 1rem 0 0;
-            }
-            .flexList{
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                height: fit-content;
-                margin: 3rem 0;
-                :nth-child(2){
-                    position: absolute;
-                    width: 32vw;
-                    max-width: 34vw;
-                    height: auto;
-                    box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.5);
-                    perspective: 1000px;
-                    z-index: 100;
-                }
-                // :nth-child(3), :nth-child(4){
-                //     position: absolute;
-                //     /* top: -10px; */
-                //     width: 25vw;
-                //     /* align-self: center; */
-                //     height: 44vh;
-                //     box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.5);
-                //     perspective: 1000px;
-                //     z-index: 90;
-                // }
-            }
-        }
+    .scrollView{
+        width: 80vw;
+        height: 60vh;
+        max-width: 80vw;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        justify-content: space-evenly;
+        row-gap: 1.5rem;
+    }
     }
 }

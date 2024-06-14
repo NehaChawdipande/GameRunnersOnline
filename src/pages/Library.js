@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import './Home.scss';
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Library.scss';
 import WindowCard from '../components/WindowCard';
 
-const Home = () => {
+const Library = () => {
     const [gamesList, setGamesList] = useState([
         {
             "id": 345,
@@ -69,6 +69,58 @@ const Home = () => {
             "developer": "Goodgame Studios",
             "release_date": "2011-08-14",
             "freetogame_profile_url": "https://www.freetogame.com/goodgame-empire"
+        },
+        {
+            "id": 573,
+            "title": "Titan Revenge",
+            "thumbnail": "https://www.freetogame.com/g/573/thumbnail.jpg",
+            "short_description": "A 3D Norse-themed browser MMORPG developed and published by Game Hollywood Games",
+            "game_url": "https://www.freetogame.com/open/titan-revenge",
+            "genre": "MMORPG",
+            "platform": "Web Browser",
+            "publisher": "Game Hollywood Games",
+            "developer": "Game Hollywood Games",
+            "release_date": "2023-12-20",
+            "freetogame_profile_url": "https://www.freetogame.com/titan-revenge"
+        },
+        {
+            "id": 522,
+            "title": "Flyff Universe",
+            "thumbnail": "https://www.freetogame.com/g/522/thumbnail.jpg",
+            "short_description": "Get the full Flyff experience on any platform with the free-to-play browser-based MMORPG Flyff Universe.",
+            "game_url": "https://www.freetogame.com/open/flyff-universe",
+            "genre": "MMORPG",
+            "platform": "Web Browser",
+            "publisher": "Gala Lab",
+            "developer": "Gala Lab",
+            "release_date": "2022-06-14",
+            "freetogame_profile_url": "https://www.freetogame.com/flyff-universe"
+        },
+        {
+            "id": 455,
+            "title": "Eternal Fury",
+            "thumbnail": "https://www.freetogame.com/g/455/thumbnail.jpg",
+            "short_description": "A free-to-play ARPG from R2 Games!",
+            "game_url": "https://www.freetogame.com/open/eternal-fury",
+            "genre": "MMORPG",
+            "platform": "Web Browser",
+            "publisher": "R2 Games",
+            "developer": "R2 Games",
+            "release_date": "2019-05-21",
+            "freetogame_profile_url": "https://www.freetogame.com/eternal-fury"
+        },
+        {
+            "id": 458,
+            "title": "League of Angels - Heaven's Fury",
+            "thumbnail": "https://www.freetogame.com/g/458/thumbnail.jpg",
+            "short_description": "A free-to-play, browser-based fantasy online action RPG based loosely on Western mythology!",
+            "game_url": "https://www.freetogame.com/open/league-of-angels-heavens-fury",
+            "genre": "MMORPG",
+            "platform": "Web Browser",
+            "publisher": "Gtarcade",
+            "developer": "Yoozoo Games",
+            "release_date": "2020-01-09",
+            "freetogame_profile_url": "https://www.freetogame.com/league-of-angels-heavens-fury"
         }
     ]);
 
@@ -76,7 +128,7 @@ const Home = () => {
         //navigate to library
         console.log('redirecting..');
     }
-    
+
     // const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser&limit=10';
     // const options = {
     //     method: 'GET',
@@ -85,7 +137,7 @@ const Home = () => {
     //         'x-rapidapi-host': ''
     //     }
     // };
-    
+
     // useEffect(() => {
     //   const fetchGames = async () => {
     //     const res =  await fetch(url, options).then((response)=>response.json());
@@ -94,31 +146,28 @@ const Home = () => {
     //   fetchGames();
     // }, []);
     // console.log(gamesList);
-    return (<>
-        <div className='home'>
-            <div className='container'>
-                <div>
-                    <div className='nav'>
-                        <h1>GAME RUNNERS ONLINE</h1>
-                        <Link className='viewAll' to="/all">
-                        <h5>View All</h5>
-              </Link>
-                      
-                    </div>
-                    <h3>Join the pixel party</h3>
-                </div>
+    return (<div className='library'>
+        <div className='container'>
+            <div>
+                <div className='nav'>
+                    <h1>GAME RUNNERS ONLINE</h1>
+                    <Link className='viewAll' to="/">
+                        <h5>Home</h5>
+                    </Link>
 
-                <div className='suggestions'>
-                    <h4>TOP SUGGESTIONS</h4>
-                    <div className='flexList'>
-                        {gamesList.slice(0,3).map(function(item, index){
+                </div>
+                <h3>Join the pixel party</h3>
+                <div className='scrollView'>
+
+                
+                        {gamesList.map(function(item, index){
                     return <WindowCard key={ index } props={item}>{item.title}</WindowCard>;
                   })}
-                    </div>
                 </div>
             </div>
         </div>
-    </>)
+    </div>
+    )
 }
 
-export default Home;
+export default Library;

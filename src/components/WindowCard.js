@@ -6,9 +6,6 @@ const WindowCard = (props) => {
     return (<>
         <div className='window'>
             <img src={game.thumbnail} alt="gameImg"></img>
-            <div className='details'>
-                <h5>{game.title}</h5>
-            </div>
         </div>
     </>)
 }

@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+import { Link, Route, Routes } from "react-router-dom";
 import './App.scss';
 import Home from './pages/Home';
+import Library from './pages/Library';
 
 function App() {
   return (
@@ -19,7 +20,12 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Home/>
+      {/* <Home/> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="all" element={<Library />} />
+      </Routes>
     </div>
   );
 }

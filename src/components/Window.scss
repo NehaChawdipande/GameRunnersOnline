@@ -1,8 +1,10 @@
 .window{
     border: 1px solid rgb(184, 0, 204);
-    width: 20vw;
-    height: 40vh;
-    background-color: rgba(78, 15, 63, 0.593);
+    width: 30vw;
+    max-width: 34vw;
+    height: fit-content;
+    background-color: rgba(78, 15, 63, 0.7);
+    border-radius: 2rem;
     h5{
         margin: 8px 0;
         text-overflow: ellipsis;
@@ -13,7 +15,10 @@
         text-overflow: ellipsis;
     }
     img{
-        width:20vw;
-        height:20vh;
+        width: 100%;
+        object-fit: COVER;
+        display: block;
+        height: 100%;
+        border-radius: 2rem;
     }
 }
